@@ -1,0 +1,36 @@
+﻿@section scripts{
+    <script>
+        $(document).ready(function () {
+
+            var graph = new Graph("xAxis", "yAxis", "zAxis");
+            var dataPoints = [
+                {
+                    "title":"McDonalds",
+                    "xAxis": 5,
+                    "yAxis": 7,
+                    "zAxis": 12
+                }, {
+                    "title": "Wendy's",
+                    "xAxis": 2,
+                    "yAxis": 7,
+                    "zAxis": 3
+                }, {
+                    "title": "BurgerKing",
+                    "xAxis": 1,
+                    "yAxis": 3,
+                    "zAxis": 5
+                }, {
+                    "title": "Whattaburger",
+                    "xAxis": 3,
+                    "yAxis": 2,
+                    "zAxis": 8
+                }];
+            graph.drawGraph(dataPoints);
+        });
+    </script>
+}
+<div id="placeHolder">
+    <canvas id="graph" height="600px" width="600px"></canvas>
+    <div id="gInfo"></div>
+    <div id="legend"></div>
+</div>
